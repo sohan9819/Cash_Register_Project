@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Cash Register Project</title>
+  </head>
+  <body>
+    <h1>Cash Register Project</h1>
+    <h2>
+      Enter the bill amount and cash given by the customer and know minimum
+      number of notes to return.
+    </h2>
+    <form action="" id="billForm">
+      <label for="bill">Enter the Bill amount :</label>
+      <input type="text" name="bill" />
+      <label for="paid">Enter the Cash given :</label>
+      <input type="text" name="paid" />
+      <button type="submit">Check</button>
+    </form>
+    <h3 id="warn"></h3>
+    <table>
+      <tbody>
+        <tr>
+          <th>Number of notes</th>
+          <td id="twoThos">0</td>
+          <td id="fivHun">0</td>
+          <td id="hun">0</td>
+          <td id="twent">0</td>
+          <td id="ten">0</td>
+          <td id="fiv">0</td>
+          <td id="one">0</td>
+        </tr>
+        <tr>
+          <th>Note</th>
+          <td>2000</td>
+          <td>500</td>
+          <td>100</td>
+          <td>20</td>
+          <td>10</td>
+          <td>5</td>
+          <td>1</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
