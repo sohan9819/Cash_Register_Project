@@ -22,7 +22,7 @@ form.addEventListener('submit' , function(e){
     // console.log(bill)
     // console.log(paid)
 
-    if ( bill === "" || paid === "" || isNaN(paid) || isNaN(bill)){
+    if ( bill === "" || paid === ""){
         warn.innerText = "Enter the fields correctly"
     }
     else if ( bill - paid > 0){
