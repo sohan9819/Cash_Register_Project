@@ -15,6 +15,7 @@ var returnCash = 0;
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
+  resetTable();
   returnCash = 0;
   const bill = this.bill.value;
   const paid = this.paid.value;
@@ -24,10 +25,13 @@ form.addEventListener("submit", function (e) {
 
   if (bill === "" || paid === "") {
     warn.innerText = "Enter the fields correctly";
+    resetTable();
   } else if (bill < 0 || paid < 0) {
     warn.innerText = "Enter the fields correctly , cash connot be negative";
+    resetTable();
   } else if (bill - paid > 0) {
     warn.innerText = `Customer has to pay ${bill - paid} rupees more`;
+    resetTable();
   } else if (bill <= paid) {
     warn.innerText = `Returning amount : ${paid - bill}`;
     cashReturn(paid - bill);
@@ -72,4 +76,14 @@ function cashReturn(amount) {
     amount = amount % 1;
     one.innerText = returnCash.toString().split(".")[0];
   }
+}
+
+function resetTable() {
+  twoThos.innerText = "0";
+  fivHun.innerText = "0";
+  hun.innerText = "0";
+  twent.innerText = "0";
+  ten.innerText = "0";
+  fiv.innerText = "0";
+  one.innerText = "0";
 }
