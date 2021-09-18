@@ -30,7 +30,6 @@ form.addEventListener("submit", function (e) {
     warn.innerText = `Customer has to pay ${bill - paid} rupees more`;
   } else if (bill <= paid) {
     warn.innerText = `Returning amount : ${paid - bill}`;
-  } else {
     cashReturn(paid - bill);
   }
 });
